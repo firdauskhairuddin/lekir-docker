@@ -33,9 +33,9 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create uploads directory and set permissions
-RUN mkdir -p /var/www/html/lekir/uploads \
-    && chown -R www-data:www-data /var/www/html/lekir/uploads \
-    && chmod -R 755 /var/www/html/lekir/uploads
+RUN mkdir -p /var/www/html/uploads \
+    && chown -R www-data:www-data /var/www/html/uploads \
+    && chmod -R 755 /var/www/htmls/uploads
 
 # Disable directory listing, tokens, and server information
 RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf \
