@@ -1,5 +1,5 @@
 #####################################
-# Setup instructions - Lekir🇲🇾Docker#
+# Setup instructions - Lekir🇲🇾Docker
 #####################################
 
 Make sure to install docker and docker compose on your pc
@@ -13,9 +13,6 @@ Run setup script
 Or manual run this command in the same directory of docker-compose.yml
 docker compose build
 docker compose up
-
-After docker is fully up, run this command to import database into mysql server
-docker compose exec -T mysql mysql -uroot -ppassword lekir < lekir.sql
 
 Access lekir-docker in this
 http://localhost:1337
