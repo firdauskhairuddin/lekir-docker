@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
 # Create uploads directory and set permissions
 RUN mkdir -p /var/www/html/uploads \
     && chown -R www-data:www-data /var/www/html/uploads \
-    && chmod -R 755 /var/www/htmls/uploads
+    && chmod -R 755 /var/www/html/uploads
 
 # Disable directory listing, tokens, and server information
 RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf \
