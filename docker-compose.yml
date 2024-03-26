@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  php-apache:
+    ports:
+      - "1337:80"
+      - "4444:4444"
+    build: './build/php'
+  mysql:
+    ports:
+      - "3306:3306"
+    build: './build/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "lekir"
+    volumes:
+      - dbData:/var/lib/mysql
+      - ./lekir.sql:/docker-entrypoint-initdb.d/dump.sql
+volumes:
+  app:
+  dbData:
