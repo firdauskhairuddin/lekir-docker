@@ -1,17 +1,21 @@
 #####################################
-# Setup instructions - Lekir🇲🇾Docker
+# Setup instructions - Lekir Docker
 #####################################
 
 Make sure to install docker and docker compose on your pc
 
 Change permission on setup.sh for linux
+
 chmod +x setup.sh
 
 Run setup script
+
 ./setup.sh
 
 Or manual run this command in the same directory of docker-compose.yml
+
 docker compose build
+
 docker compose up
 
 Access lekir-docker in this
