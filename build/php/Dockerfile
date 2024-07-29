@@ -34,10 +34,12 @@ RUN apt-get update && apt-get install -y \
 
 # Create uploads directory and set permissions
 RUN mkdir -p /var/www/html/uploads \
-    && chown -R www-data:www-data /var/www/html/uploads \
+    && chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/uploads
 
 # Disable directory listing, tokens, and server information
 RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf \
     && echo "ServerTokens Prod" >> /etc/apache2/apache2.conf \
     && echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+
+USER www-data
