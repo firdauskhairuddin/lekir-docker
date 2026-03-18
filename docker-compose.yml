@@ -6,7 +6,7 @@ services:
     build: './build/php'
   mysql:
     ports:
-      - "3306:3306"
+      - "3304:3306"
     build: './build/mysql'
     environment:
       MYSQL_ROOT_PASSWORD: "password"
